@@ -4,7 +4,7 @@
 * Criar o upload
 * Buscar por id
 * Download do arquivo
-* Listar utilizando  Lambada
+* Listar utilizando  Lambda
 
 
 
