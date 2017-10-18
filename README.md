@@ -1,8 +1,9 @@
-# Aula 8
+# Aula 9
 
-* Subir um arquivo no serviço REST
-* Usar base64
-* Guardar sua foto em uma string
+* Usar  Lambada
+* Subir um arquivo usando GridFS 
+* Customizar upload
+
 
 
 

@@ -4,9 +4,11 @@ package io.spring.boot.aula.entity;
  *
  * @author natan
  */
-public class Arquivo extends EntidadeGenerica{
-    
+public class Arquivo extends EntidadeGenerica {
+
     private String descricao;
+
+    private Long tamanho;
 
     public String getDescricao() {
         return descricao;
@@ -15,7 +17,13 @@ public class Arquivo extends EntidadeGenerica{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
-    
-    
+
+    public Long getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(Long tamanho) {
+        this.tamanho = tamanho;
+    }
+
 }
