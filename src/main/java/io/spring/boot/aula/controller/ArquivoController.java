@@ -64,9 +64,8 @@ public class ArquivoController {
     @RequestMapping(value = "/arquivo/{id}", method = RequestMethod.GET)
     public HttpEntity<byte[]> get(@PathVariable("id") String id) {
         try {
-            Arquivo arquivo = arquivoRepository.findOne(id);
 
-            Optional<GridFSDBFile> optionalCreated = loadById(arquivo.getId());
+            Optional<GridFSDBFile> optionalCreated = loadById(id);
             if (optionalCreated.isPresent()) {
                 GridFSDBFile created = optionalCreated.get();
                 ByteArrayOutputStream os = new ByteArrayOutputStream();
@@ -86,7 +85,7 @@ public class ArquivoController {
     public List<Arquivo> list() {
         List<Arquivo> arquivos = arquivoRepository.findAll();
 
-        return arquivos.stream().filter(p -> p.getTamanho() > 16127).collect(Collectors.toList());
+        return arquivos.stream().filter(p -> p.getTamanho() > 6000).collect(Collectors.toList());
     }
 
     private Optional<GridFSDBFile> loadById(String id) {
